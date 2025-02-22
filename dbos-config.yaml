@@ -7,10 +7,11 @@ name: fb_developer
 language: python
 runtimeConfig:
   start:
-    - "python main.py"
+    - pip install -r requirements.txt
+    - python main.py
 database:
   migrate:
-    - echo 'No migrations specified'
+    - alembic upgrade head
 telemetry:
   logs:
     logLevel: INFO
