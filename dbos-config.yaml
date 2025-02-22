@@ -8,6 +8,7 @@ language: python
 runtimeConfig:
   start:
     - pip install -r requirements.txt
+    - pip install dbos  # Ensure DBOS CLI is installed
     - python main.py
 database:
   migrate:
